@@ -8,7 +8,14 @@ export default function FontHOCComponent({
 }: {
   children: ReactNode;
 }) {
-  const { font } = useStore();
+  const { lang } = useStore();
 
-  return <div dir={font === "font-v"? "rtl": "ltr"} className={`${font}`}>{children}</div>;
+  return (
+    <div
+      dir={lang === "fa" ? "rtl" : "ltr"}
+      className={`${lang === "fa" ? "font-v" : "font-p"}`}
+    >
+      {children}
+    </div>
+  );
 }
