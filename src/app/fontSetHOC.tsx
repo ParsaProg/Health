@@ -10,5 +10,5 @@ export default function FontHOCComponent({
 }) {
   const { font } = useStore();
 
-  return <div className={`${font}`}>{children}</div>;
+  return <div dir={font === "font-v"? "rtl": "ltr"} className={`${font}`}>{children}</div>;
 }
