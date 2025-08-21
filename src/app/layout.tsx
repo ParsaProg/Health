@@ -1,20 +1,20 @@
+import ClientLayout from "./ClientLayout";
 import type { Metadata } from "next";
-import "./globals.css";
-import FontHOCComponent from "./fontSetHOC";
 
 export const metadata: Metadata = {
   title: "Health Platform",
-  description:
-    " Get you'r life and body healthy with parsa and yasna on content project",
+  description: "Get your body healthy with this app",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="fa">
+    <html lang="fa" className="dark" style= {{colorScheme: "dark"}}>
       <body>
-        <FontHOCComponent>{children}</FontHOCComponent>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

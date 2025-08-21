@@ -1,9 +1,11 @@
 "use client";
 import fa from "../langs/fa.json";
 import en from "../langs/en.json";
+import { useTheme } from "next-themes";
 
 import { useStore } from "../stores/userStore";
 export default function Home() {
+  const { theme, setTheme } = useTheme();
   const { lang, setLang } = useStore();
   return (
     <div>
@@ -17,8 +19,10 @@ export default function Home() {
           } else {
             setLang("fa");
           }
+
+          setTheme(theme === "dark" ? "light" : "dark");
         }}
-        className="flex justify-center items-center bg-white shadow-xl shadow-[#0000003c] rounded-lg border-[1px] border-slate-200 p-5 cursor-pointer mx-auto"
+        className="flex justify-center items-center dark:bg-white bg-black shadow-xl shadow-[#0000003c] rounded-lg border-[1px] border-slate-200 p-5 cursor-pointer mx-auto"
       >
         {lang === "fa" ? fa.title : en.title}
       </button>
