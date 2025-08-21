@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-interface fontType {
-  font: string;
-  setFont: (newFont: string) => void;
+interface langType {
+  lang: string;
+  setLang: (newFont: string) => void;
 }
 
-export const useStore = create<fontType>((set) => ({
-  font: "font-v",
-  setFont: (newFont: string) => set({ font: newFont }),
+export const useStore = create<langType>((set) => ({
+  lang: "en",
+  setLang: (newLang: any) => set({ lang: newLang }),
 }));
