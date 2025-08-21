@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FontHOCComponent from "./fontSetHOC";
 
 export const metadata: Metadata = {
   title: "Health Platform",
@@ -12,8 +13,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fa">
-      <body>{children}
-        
+      <body>
+        <FontHOCComponent>{children}</FontHOCComponent>
       </body>
     </html>
   );
