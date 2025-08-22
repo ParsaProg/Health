@@ -9,15 +9,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Health Platform",
     description: "Get your body healthy with this app",
-    images:
-      "https://github.com/ParsaProg/Health/blob/main/public/images/c67cc114fc289a3eacc442da873053b2.jpg?raw=true",
+    siteName: "Health",
+    url: "https://health-mauve-five.vercel.app",
+    images: [
+      {
+        url: "https://github.com/ParsaProg/Health/blob/main/public/images/c67cc114fc289a3eacc442da873053b2.jpg?raw=true",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Health Platform",
     description: "Get your body healthy with this app",
-    images:
-      "https://github.com/ParsaProg/Health/blob/main/public/images/c67cc114fc289a3eacc442da873053b2.jpg?raw=true",
+    images: [
+      {
+        url: "https://github.com/ParsaProg/Health/blob/main/public/images/c67cc114fc289a3eacc442da873053b2.jpg?raw=true",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
