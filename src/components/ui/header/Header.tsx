@@ -55,7 +55,7 @@ export default function Header() {
         initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 0.7 }}
         animate={{ opacity: 1, y: 0 }}
-        className="backdrop-blur-md z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
+        className="backdrop-blur-md bg-[#ffffff5a] z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
       >
         <div className="flex items-center justify-between w-[95%]">
           <motion.div
@@ -128,18 +128,6 @@ export default function Header() {
             onClick={() => setIsShowDialog(!isShowDialog)}
             className="relative cursor-pointer hidden [@media(max-width:1030px)]:flex p-3 rounded-lg border-[1px] border-slate-300"
           >
-            <AnimatePresence>
-              {isShowDialog && (
-                <motion.div
-                  key="backdrop"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="top-[70px] right-0 w-full h-[100vh] fixed z-[998] bg-white/30 backdrop-blur-[2px]"
-                />
-              )}
-            </AnimatePresence>
             <AnimatePresence mode="wait">
               {isShowDialog ? (
                 <motion.div
@@ -229,6 +217,18 @@ export default function Header() {
           </motion.div>
         </div>
       </motion.div>
+
+      {isShowDialog && (
+        <motion.div
+          key="backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          style={{ backdropFilter: "blur(10px)" }}
+          className="hidden [@media(max-width:1030px)]:flex top-[100px] inset-0 h-[100vh] w-full fixed right-0 backdrop-blur-[10px]"
+        />
+      )}
     </AnimatePresence>
   );
 }
