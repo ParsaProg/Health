@@ -8,6 +8,7 @@ import {
   Rss,
   Sparkles,
   Target,
+  X,
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navItemClassName } from "@/constants/navItems";
@@ -51,7 +52,6 @@ export default function Header() {
   return (
     <AnimatePresence>
       <div className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]">
-        
         <div className="flex items-center justify-between w-[95%]">
           <motion.div
             initial={{ opacity: 0, y: -100, bottom: -10 }}
@@ -130,7 +130,38 @@ export default function Header() {
                 />
               )}
             </AnimatePresence>
-            <AlignJustify size={20} />
+            <AnimatePresence mode="wait">
+              {isShowDialog ? (
+                <motion.div
+                  key="close"
+                  initial={{ opacity: 0, rotate: 60 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{
+                    opacity: 0,
+                    rotate: 60,
+                    transition: { duration: 0.2, ease: "easeInOut" },
+                  }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ opacity: 0, rotate: 60 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{
+                    opacity: 0,
+                    rotate: 60,
+                    transition: { duration: 0.2, ease: "easeInOut" },
+                  }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                  <AlignJustify size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <AnimatePresence>
               {isShowDialog && (
                 <motion.div
