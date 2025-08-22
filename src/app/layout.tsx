@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <FontHOCComponent>
           <Header />
-          <div className="mt-[100px]"></div>
+          <div className="mt-[130px]"></div>
           <ClientLayout>{children}</ClientLayout>
         </FontHOCComponent>
       </body>

@@ -51,7 +51,7 @@ export default function Header() {
   ];
   return (
     <AnimatePresence>
-      <div className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]">
+      <motion.div initial={{opacity: 0, y: -200 }} transition={{delay: 0.2}} animate={{opacity: 1, y: 0}} className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]">
         <div className="flex items-center justify-between w-[95%]">
           <motion.div
             initial={{ opacity: 0, y: -100, bottom: -10 }}
@@ -92,7 +92,7 @@ export default function Header() {
                       ? { scale: 1.1, transition: { delay: 0, duration: 0.2 } }
                       : {}
                   }
-                  transition={{ delay: _i * 0.05 }}
+                  transition={{ delay: _i * 0.2 }}
                   key={_i}
                   className={
                     val.special === true
@@ -114,7 +114,10 @@ export default function Header() {
               );
             })}
           </div>
-          <div
+          <motion.div
+          initial={{opacity: 0, y: -100}}
+          animate={{opacity: 1, y: 0}}
+          transition={{delay: 0.4}}
             onClick={() => setIsShowDialog(!isShowDialog)}
             className="relative cursor-pointer hidden [@media(max-width:1030px)]:flex p-3 rounded-lg border-[1px] border-slate-300"
           >
@@ -216,9 +219,9 @@ export default function Header() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </AnimatePresence>
   );
 }
