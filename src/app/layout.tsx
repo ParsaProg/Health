@@ -1,5 +1,7 @@
+import Header from "@/components/ui/header/Header";
 import ClientLayout from "./ClientLayout";
 import type { Metadata } from "next";
+import FontHOCComponent from "../HOC/fontSetHOC";
 
 export const metadata: Metadata = {
   title: "Health Platform",
@@ -12,9 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" className="dark" style= {{colorScheme: "dark"}}>
+    <html lang="fa" className="light" style={{ colorScheme: "light" }}>
       <body>
-        <ClientLayout>{children}</ClientLayout>
+        <FontHOCComponent>
+          <Header />
+          <ClientLayout>{children}</ClientLayout>
+        </FontHOCComponent>
       </body>
     </html>
   );
