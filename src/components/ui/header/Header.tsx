@@ -15,7 +15,7 @@ import cn from "@/utils/cn";
 import { useState } from "react";
 
 export default function Header() {
-  const [isShowDialog, setIsShowDialog] = useState<boolean>(true);
+  const [isShowDialog, setIsShowDialog] = useState<boolean>(false);
   const navItems = [
     {
       title: "Articles",
