@@ -6,6 +6,12 @@ import FontHOCComponent from "../HOC/fontSetHOC";
 export const metadata: Metadata = {
   title: "Health Platform",
   description: "Get your body healthy with this app",
+  icons:[
+    {
+      url:  "/favicon.ico",
+      sizes: "70x70"
+    }
+  ],
   openGraph: {
     title: "Health Platform",
     description: "Get your body healthy with this app",
