@@ -53,7 +53,7 @@ export default function Header() {
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: -200 }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
         animate={{ opacity: 1, y: 0 }}
         className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
       >
