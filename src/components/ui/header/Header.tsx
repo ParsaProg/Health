@@ -53,9 +53,9 @@ export default function Header() {
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: -200 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
+        transition={{ duration: 0.7 }}
         animate={{ opacity: 1, y: 0 }}
-        className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
+        className="backdrop-blur-md z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
       >
         <div className="flex items-center justify-between w-[95%]">
           <motion.div
@@ -66,7 +66,7 @@ export default function Header() {
               y: -100,
               bottom: -10,
             }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.7 }}
             className="w-[200px] flex items-center justify-between"
           >
             <section className="relative text-[#B80023] flex items-center gap-x-2">
@@ -124,7 +124,7 @@ export default function Header() {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.7 }}
             onClick={() => setIsShowDialog(!isShowDialog)}
             className="relative cursor-pointer hidden [@media(max-width:1030px)]:flex p-3 rounded-lg border-[1px] border-slate-300"
           >
