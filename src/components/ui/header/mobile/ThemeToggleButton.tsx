@@ -8,21 +8,21 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle({ isShowThemeDialog }: any) {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const themeItems = [
     {
       title: "Dark",
-      icon: <Moon size={20} className="text-black" />,
+      icon: <Moon size={20} />,
       theme: "dark",
     },
     {
       title: "Light",
-      icon: <Sun size={20} className="text-black" />,
+      icon: <Sun size={20} />,
       theme: "light",
     },
     {
       title: "System",
-      icon: <Monitor size={18} className="text-black" />,
+      icon: <Monitor size={18} />,
       theme: "system",
     },
   ];
@@ -93,7 +93,7 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
               y: -50,
               scale: 0.8,
             }}
-            className="z-[9999] bg-white border-slate-300 border-[1px] rounded-lg absolute right-[0] top-14 w-[200px] p-5 flex items-start flex-col gap-y-6 overflow-hidden"
+            className="z-[9999] bg-white border-slate-300 border-[1px] rounded-lg absolute right-[0] top-14 w-[200px] py-2 p-2 flex items-start flex-col  overflow-hidden"
           >
             {themeItems.map((val: any, _i: any) => {
               return (
@@ -117,14 +117,15 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
                   }
                   transition={{ delay: _i * 0.1 }}
                   key={_i}
-                  className={
-                    "group cursor-pointer flex items-center gap-x-3 w-full"
-                  }
+                  className={`${
+                    theme === val.theme.toLowerCase() && "bg-[#0040ff25]"
+                  } group cursor-pointer text-black flex rounded-md p-3 items-center gap-x-3 w-full justify-between`}
                 >
-                  {val.icon}
-                  <h2 className={cn(`font-[500] ${"text-black"}`)}>
-                    {val.title}
-                  </h2>
+                  <div className="flex items-center gap-x-2">
+                    {val.icon}
+                    <h2 className={cn(`font-[500]`)}>{val.title}</h2>
+                  </div>
+                  {theme === val.theme.toLowerCase() && <div className="rounded-full bg-blue-500 w-2 h-2"></div>}
                 </motion.div>
               );
             })}
