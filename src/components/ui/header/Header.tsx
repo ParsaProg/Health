@@ -51,7 +51,12 @@ export default function Header() {
   ];
   return (
     <AnimatePresence>
-      <motion.div initial={{opacity: 0, y: -200 }} transition={{delay: 0.1}} animate={{opacity: 1, y: 0}} className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]">
+      <motion.div
+        initial={{ opacity: 0, y: -200 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="z-[9999] fixed top-0 w-[100%] flex justify-center mt-4 pb-4 shadow-lg shadow-[#5555552c]"
+      >
         <div className="flex items-center justify-between w-[95%]">
           <motion.div
             initial={{ opacity: 0, y: -100, bottom: -10 }}
@@ -68,7 +73,9 @@ export default function Header() {
               <Heart size={40} />
               <div className="absolute top-1 left-6 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
               <div className="flex flex-col items-start">
-                <h1 className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#B80023] to-[#9600b8]">Health</h1>
+                <h1 className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#B80023] to-[#9600b8]">
+                  Health
+                </h1>
                 <h1 className="font-light text-slate-600 text-sm">
                   Next-Gen Wellness
                 </h1>
@@ -115,9 +122,9 @@ export default function Header() {
             })}
           </div>
           <motion.div
-          initial={{opacity: 0, y: -100}}
-          animate={{opacity: 1, y: 0}}
-          transition={{delay: 0.4}}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
             onClick={() => setIsShowDialog(!isShowDialog)}
             className="relative cursor-pointer hidden [@media(max-width:1030px)]:flex p-3 rounded-lg border-[1px] border-slate-300"
           >
