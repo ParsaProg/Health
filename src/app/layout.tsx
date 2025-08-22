@@ -1,4 +1,3 @@
-import Header from "@/components/ui/header/Header";
 import ClientLayout from "./ClientLayout";
 import type { Metadata } from "next";
 import FontHOCComponent from "../HOC/fontSetHOC";
@@ -6,11 +5,11 @@ import FontHOCComponent from "../HOC/fontSetHOC";
 export const metadata: Metadata = {
   title: "Health Platform",
   description: "Get your body healthy with this app",
-  icons:[
+  icons: [
     {
-      url:  "/favicon.ico",
-      sizes: "70x70"
-    }
+      url: "/favicon.ico",
+      sizes: "70x70",
+    },
   ],
   openGraph: {
     title: "Health Platform",
@@ -45,10 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" className="light" style={{ colorScheme: "light" }}>
+    <html lang="fa" suppressHydrationWarning>
       <body>
         <FontHOCComponent>
-          <Header />
           <div className="mt-[130px]"></div>
           <ClientLayout>{children}</ClientLayout>
         </FontHOCComponent>
