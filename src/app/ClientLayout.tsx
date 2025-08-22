@@ -2,7 +2,7 @@
 
 import "./globals.css";
 
-import FontHOCComponent from "./fontSetHOC";
+import FontHOCComponent from "../HOC/fontSetHOC";
 import { ThemeProvider } from "next-themes";
 
 export default function ClientLayout({
