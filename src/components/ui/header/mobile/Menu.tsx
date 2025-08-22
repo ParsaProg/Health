@@ -1,7 +1,7 @@
 import cn from "@/utils/cn";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import { MobileMenu } from "@/interfaces/mobileMenu";
+import type { MobileMenu } from "@/interfaces/mobileMenu";
 
 export default function MobileMenu({ isShowDialog, navItems }: MobileMenu) {
   return (
