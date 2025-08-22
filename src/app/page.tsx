@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div className="mt-[100px]">hello</div>;
+  return <div className="text-center font-bold">Main Page</div>;
 }
