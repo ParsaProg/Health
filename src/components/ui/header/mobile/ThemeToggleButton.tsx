@@ -35,13 +35,54 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
   }, []);
   return (
     <div className="hover:bg-slate-200 transition-colors duration-200 cursor-pointer focus:scale-[0.9] relative rounded-lg p-3 flex justify-center border-[1px] border-slate-300">
-      {themeMode === "dark" ? (
-        <Moon size={20} />
-      ) : themeMode === "light" ? (
-        <Sun size={20} />
-      ) : (
-        <Monitor size={19}/>
-      )}
+      <AnimatePresence mode="wait">
+        {themeMode === "dark" ? (
+          <motion.div
+            key="moon"
+            initial={{ opacity: 0, rotate: 60, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1, rotate: 1 }}
+            exit={{
+              opacity: 0,
+              rotate: 60,
+              scale: 0.9,
+              transition: { duration: 0.4 },
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <Moon size={20} />
+          </motion.div>
+        ) : themeMode === "light" ? (
+          <motion.div
+            key="light"
+            initial={{ opacity: 0, rotate: 60, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1, rotate: 1 }}
+            exit={{
+              opacity: 0,
+              rotate: 60,
+              scale: 0.9,
+              transition: { duration: 0.4 },
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <Sun size={20} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="system"
+            initial={{ opacity: 0, rotate: 60, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1, rotate: 1 }}
+            exit={{
+              opacity: 0,
+              rotate: 60,
+              scale: 0.9,
+              transition: { duration: 0.4 },
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <Monitor size={19} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <AnimatePresence>
         {isShowThemeDialog && (
           <motion.div
@@ -58,8 +99,8 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
               return (
                 <motion.div
                   onClick={() => {
-                    setTheme(val.theme)
-                    setThemeMode(val.theme)
+                    setTheme(val.theme);
+                    setThemeMode(val.theme);
                   }}
                   initial={{ opacity: 0, y: _i * -30 }}
                   animate={{ opacity: 1, y: 0 }}

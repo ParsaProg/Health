@@ -28,10 +28,14 @@ export default function MobileMenu({ isShowDialog, navItems }: MobileMenu) {
                 whileTap={{
                   scale: 0.95,
                 }}
-                transition={{
-                  delay: !val.special ? _i * 0.1 : 0,
-                  duration: 0.2,
-                }}
+                transition={
+                  val.special
+                    ? {
+                        delay: _i * 0.1,
+                        duration: 0.2,
+                      }
+                    : { delay: _i * 0.1 }
+                }
                 key={_i}
                 className={
                   val.special === true
