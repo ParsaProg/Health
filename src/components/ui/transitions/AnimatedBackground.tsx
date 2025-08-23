@@ -22,15 +22,15 @@ export default function AnimatedBackground() {
     <Particles
       id="tsparticles"
       options={{
-        fpsLimit: isMobile ? 30 : 60,
+        fpsLimit: isMobile ? 25 : 60,
         particles: {
-          number: { value: isMobile ? 25 : 80 },
+          number: { value: isMobile ? 15 : 80 },
           color: { value: "#58a6ff" },
           links: {
-            enable: !isMobile,
+            enable: true,
             color: "#58a6ff",
-            distance: isMobile ? 80 : 150,
-            opacity: isMobile ? 0.2 : 0.4,
+            distance: isMobile ? 100 : 150,
+            opacity: 0.4,
             width: 1,
           },
           move: {
@@ -39,7 +39,7 @@ export default function AnimatedBackground() {
           },
           opacity: { value: 0.3 },
           shape: { type: "circle" },
-          size: { value: { min: 1, max: isMobile ? 2 : 4 } },
+          size: { value: { min: 1, max: isMobile ? 3 : 4 } },
         },
         detectRetina: true,
       }}
