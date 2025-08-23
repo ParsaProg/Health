@@ -1,6 +1,7 @@
 import ClientLayout from "./ClientLayout";
 import type { Metadata } from "next";
 import FontHOCComponent from "../HOC/fontSetHOC";
+import AnimatedBackground from "@/components/ui/transitions/AnimatedBackground";
 
 export const metadata: Metadata = {
   title: "Health Platform",
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="fa" suppressHydrationWarning>
       <body>
+        <AnimatedBackground />
         <FontHOCComponent>
           <div className="mt-[130px]"></div>
           <ClientLayout>{children}</ClientLayout>
