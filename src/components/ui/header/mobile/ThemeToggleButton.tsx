@@ -36,7 +36,7 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
   return (
     <div className="transition-colors duration-200 cursor-pointer focus:scale-[0.9]
     relative rounded-lg py-3 px-3 flex justify-center
-    hover:bg-slate-200 dark:hover:bg-slate-600">
+    hover:bg-slate-200 dark:hover:bg-slate-800">
       <AnimatePresence mode="wait">
         {themeMode === "dark" ? (
           <motion.div

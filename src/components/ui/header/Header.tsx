@@ -67,7 +67,7 @@ export default function Header() {
                 setIsShowDialog(!isShowDialog);
                 setIsShowThemeDialog(false);
               }}
-              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex py-3  rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 px-3 transition-colors duration-200"
+              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex py-3  rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 px-3 transition-colors duration-200"
             >
               <MobileMenuButtonHeader isShowDialog={isShowDialog} />
 
