@@ -22,8 +22,8 @@ export default function BackdropFilter({
           transition={{ duration: 0.5 }}
           className={`${
             isShowDialog && "hidden"
-          } [@media(max-width:1056)]:flex top-[100px] inset-0 h-[100vh] w-full fixed right-0 transition-all duration-200 ${
-            isShowDialog && "backdrop-blur-[10px]"
+          } [@media(max-width:1056)]:flex top-[80px] inset-0 h-[100vh] w-full fixed right-0 transition-all duration-200 ${
+            isShowDialog && "backdrop-blur-[5px] dark:backdrop-blur-[10px]"
           }`}
         />
       ) : null}
