@@ -83,7 +83,7 @@ export default function Header() {
                 setIsShowDialog(false);
                 setIsShowThemeDialog(!isShowThemeDialog);
               }}
-              className="relative cursor-pointer [@media(min-with:1056px)]:px-2 [@media(min-with:1056px)]:py-1"
+              className="relative cursor-pointer [@media(min-width:1056px)]:px-2 [@media(min-width:1056px)]:py-2"
             >
               <ThemeToggle
                 isShowThemeDialog={isShowThemeDialog}
