@@ -16,7 +16,7 @@ export default function MobileMenu({ isShowDialog, navItems }: MobileMenu) {
             y: -50,
             scale: 0.8,
           }}
-          className="z-[9999] bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-900 border-[1px] rounded-lg absolute right-[0] top-[60px] w-[270px] p-3 flex items-start gap-y-2 flex-col overflow-hidden"
+          className="z-[9999] bg-white dark:bg-gray-950 border-slate-300 dark:border-slate-900 border-[1px] rounded-lg absolute right-[0] top-[60px] w-[270px] p-3 flex items-start gap-y-2 flex-col overflow-hidden"
         >
           {navItems.map((val: any, _i: any) => {
             return (
