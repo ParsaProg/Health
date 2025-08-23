@@ -12,17 +12,17 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
   const themeItems = [
     {
       title: "Dark",
-      icon: <Moon size={20} className="text-slate-600"/>,
+      icon: <Moon size={20} className="text-slate-600 dark:text-slate-400"/>,
       theme: "dark",
     },
     {
       title: "Light",
-      icon: <Sun size={20} className="text-slate-600"/>,
+      icon: <Sun size={20} className="text-slate-600 dark:text-slate-400"/>,
       theme: "light",
     },
     {
       title: "System",
-      icon: <Monitor size={18} className="text-slate-600"/>,
+      icon: <Monitor size={18} className="text-slate-600 dark:text-slate-400"/>,
       theme: "system",
     },
   ];
@@ -34,7 +34,9 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
     setThemeMode(theme as string);
   }, []);
   return (
-    <div className="hover:bg-slate-200 transition-colors duration-200 cursor-pointer focus:scale-[0.9] relative rounded-lg py-3 px-3 flex justify-center">
+    <div className="transition-colors duration-200 cursor-pointer focus:scale-[0.9]
+    relative rounded-lg py-3 px-3 flex justify-center
+    hover:bg-slate-200 dark:hover:bg-slate-600">
       <AnimatePresence mode="wait">
         {themeMode === "dark" ? (
           <motion.div
@@ -93,7 +95,7 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
               y: -50,
               scale: 0.8,
             }}
-            className="z-[9999] bg-white border-slate-300 border-[1px] rounded-lg absolute right-[0] top-14 w-[170px] py-2 p-2 flex items-start flex-col  overflow-hidden"
+            className="z-[9999] bg-white dark:bg-slate-950 dark:text-white border-slate-300 dark:border-slate-900 border-[1px] rounded-lg absolute right-[0] top-[60px] w-[170px] py-2 p-2 flex items-start flex-col  overflow-hidden"
           >
             {themeItems.map((val: any, _i: any) => {
               return (
@@ -118,8 +120,8 @@ export default function ThemeToggle({ isShowThemeDialog }: any) {
                   transition={{ delay: _i * 0.03 }}
                   key={_i}
                   className={`${
-                    theme === val.theme.toLowerCase() && "bg-[#0040ff25]"
-                  } group text-sm cursor-pointer text-black flex rounded-md p-3 items-center gap-x-3 w-full justify-between`}
+                    theme === val.theme.toLowerCase() && "bg-[#0040ff25] dark:bg-[#0059ff21]"
+                  } group text-sm cursor-pointer text-black dark:text-white flex rounded-md p-3 items-center gap-x-3 w-full justify-between`}
                 >
                   <div className="flex items-center gap-x-2">
                     {val.icon}

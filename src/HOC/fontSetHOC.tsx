@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useStore } from "@/stores/userStore";
 
 export default function FontHOCComponent({

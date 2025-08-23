@@ -27,7 +27,7 @@ export default function NavItem({ navItems }: any) {
             <h2
               className={cn(
                 `font-[500] ${
-                  val.special!! === true ? "text-white" : "text-black"
+                  val.special!! === true ? "text-white" : "text-secondary"
                 }`
               )}
             >

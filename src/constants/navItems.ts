@@ -1,1 +1,1 @@
-export const navItemClassName = "text-slate-600 group-hover:scale-[1.12] transition-transform duration-200"
+export const navItemClassName = "text-slate-600 dark:text-slate-400 group-hover:scale-[1.12] transition-transform duration-200"

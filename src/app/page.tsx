@@ -9,9 +9,8 @@ export default function Home() {
         initial={{ opacity: 0, x: -500 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4 }}
-        className="text-center font-bold text-2xl overflow-hidden"
       >
-        Main Page
+        
       </motion.div>
     </div>
   );

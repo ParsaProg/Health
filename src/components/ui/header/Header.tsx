@@ -53,7 +53,7 @@ export default function Header() {
         initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 0.7 }}
         animate={{ opacity: 1, y: 0 }}
-        className="backdrop-blur-md bg-[#ffffff5a] z-[9999] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-sm shadow-[#5555552c]"
+        className="backdrop-blur-md bg-header z-[9999] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-sm shadow-[#5555552c]"
       >
         <div className="flex items-center justify-between w-[95%]">
           <HeaderTitleIcon />
@@ -67,7 +67,7 @@ export default function Header() {
                 setIsShowDialog(!isShowDialog);
                 setIsShowThemeDialog(false);
               }}
-              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex py-3  rounded-lg hover:bg-slate-200 px-3 transition-colors duration-200"
+              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex py-3  rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 px-3 transition-colors duration-200"
             >
               <MobileMenuButtonHeader isShowDialog={isShowDialog} />
 
@@ -83,7 +83,7 @@ export default function Header() {
                 setIsShowDialog(false);
                 setIsShowThemeDialog(!isShowThemeDialog);
               }}
-              className="relative cursor-pointer"
+              className="relative cursor-pointer [@media(min-with:1056px)]:px-2 [@media(min-with:1056px)]:py-1"
             >
               <ThemeToggle
                 isShowThemeDialog={isShowThemeDialog}

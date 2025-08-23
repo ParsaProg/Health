@@ -1,4 +1,20 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root{
+  --color-text: #000000;
+  --color-header: #ffffff5a;
+  --color-second: #45556C;
+}
+
+.dark{
+  --color-text: #ffffff;
+  --color-header: #1103305b;
+  --color-second: #d0d4db;
+}
 
 body {
   box-sizing: border-box;
@@ -14,28 +30,74 @@ body {
 }
 
 @font-face {
-  font-family: "vazir";
-  src: url("../../public/fonts/Vazirmatn-VariableFont_wght.ttf");
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-ExtraLight.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../public/fonts/Poppins-Bold.ttf");
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-Light.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../public/fonts/Poppins-Bold.ttf");
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-Medium.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-SemiBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-Bold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-ExtraBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff2/Vazir-Black.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face/woff/Vazir-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 body{
-   @apply bg-white text-black
+   @apply bg-white
 }
 
 .dark body{
-  @apply bg-[#110330] text-white
+  @apply bg-[#110330]
 }
