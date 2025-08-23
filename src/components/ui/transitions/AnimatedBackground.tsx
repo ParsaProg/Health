@@ -24,7 +24,7 @@ export default function AnimatedBackground() {
       options={{
         fpsLimit: isMobile ? 25 : 60,
         particles: {
-          number: { value: isMobile ? 15 : 80 },
+          number: { value: isMobile ? 30 : 80 },
           color: { value: "#58a6ff" },
           links: {
             enable: true,
