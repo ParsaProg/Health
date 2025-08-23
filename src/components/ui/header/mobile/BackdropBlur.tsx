@@ -20,10 +20,11 @@ export default function BackdropFilter({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          style={{ backdropFilter: "blur(10px)" }}
           className={`${
             isShowDialog && "hidden"
-          } [@media(max-width:1030px)]:flex top-[100px] inset-0 h-[100vh] w-full fixed right-0 backdrop-blur-[10px]`}
+          } [@media(max-width:1030px)]:flex top-[100px] inset-0 h-[100vh] w-full fixed right-0 transition-all duration-200 ${
+            isShowDialog && "backdrop-blur-[10px]"
+          }`}
         />
       ) : null}
     </AnimatePresence>
