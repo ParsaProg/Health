@@ -53,12 +53,12 @@ export default function Header() {
         initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 0.7 }}
         animate={{ opacity: 1, y: 0 }}
-        className="backdrop-blur-md bg-[#ffffff5a] z-[9999] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-lg shadow-[#5555552c]"
+        className="backdrop-blur-md bg-[#ffffff5a] z-[9999] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-sm shadow-[#5555552c]"
       >
         <div className="flex items-center justify-between w-[95%]">
           <HeaderTitleIcon />
 
-          <div className="flex items-cener gap-x-3">
+          <div className="flex items-cener gap-x-1">
             <motion.div
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Header() {
                 setIsShowDialog(!isShowDialog);
                 setIsShowThemeDialog(false);
               }}
-              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex p-3 rounded-lg border-[1px] border-slate-300 "
+              className="relative cursor-pointer hidden [@media(max-width:1050px)]:flex py-3  rounded-lg hover:bg-slate-200 px-3 transition-colors duration-200"
             >
               <MobileMenuButtonHeader isShowDialog={isShowDialog} />
 
