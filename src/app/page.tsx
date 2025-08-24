@@ -18,7 +18,7 @@ interface HeroRow {
   subTitle: string;
 }
 
-const heroIcon = "dark:text-slate-300 text-slate-700 md:w-10 md:h-10 w-4 h-4";
+const heroIcon = "dark:text-slate-300 text-slate-700 md:w-10 md:h-10 w-7 h-7";
 
 export default function Home() {
   const [heroRow, setHeroRow] = useState<Array<HeroRow>>([
