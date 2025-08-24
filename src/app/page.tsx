@@ -67,7 +67,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.9 }}
-          className="[@media(min-width:1000px)]:w-[1000px] p-5 md:p-0 md:leading-[40px] text-center md:text-2xl dark:text-slate-400"
+          className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] text-center md:text-2xl dark:text-slate-400"
         >
           World-Class Health Platform Transform Your Body & Life Experience the{" "}
           
@@ -75,7 +75,7 @@ export default function Home() {
           
           revolutionary health practices that transform lives globally.
         </motion.p>
-        <div className="flex items-center gap-x-5 justify-center">
+        <div className="flex items-center gap-5 justify-center flex-wrap">
           <motion.button
             initial={{ opacity: 0, scale: 0.9, x: -100 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
