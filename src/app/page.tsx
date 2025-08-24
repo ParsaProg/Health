@@ -103,9 +103,9 @@ export default function Home() {
           {heroRow.map((val, _i) => {
             return (
               <motion.section
-                initial={{ opacity: 0, scale: 0.9, y: 100 }}
+                initial={{ opacity: 0, scale: 0.9, y: 50 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: _i * 0.2, duration: 0.3 }}
+                transition={{ delay: (_i + 1) * 0.3}}
                 className="flex flex-col items-center gap-y-1"
                 key={_i}
               >
