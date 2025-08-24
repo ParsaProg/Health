@@ -45,7 +45,7 @@ export default function Home() {
   ]);
   return (
     <div className="overflow-hidden z-[1] bg-gradient-to-br from-[#0037ff13] to-[#ff00ea0f] dark:from-[#0b1330d6] dark:to-[#20071edf] animate-gradient-x bg-[length:200%_200%]">
-      <div className="flex items-center flex-col md:gap-y-8 gap-y-3 w-full md:pt-[100px] pt-[50px] pb-[100px] hero-section">
+      <div className="flex items-center flex-col md:gap-y-8 gap-y-3 w-full pt-[50px] pb-[100px] hero-section">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
