@@ -18,48 +18,48 @@ interface HeroRow {
   subTitle: string;
 }
 
-const heroIcon = "dark:text-slate-300 text-slate-700";
+const heroIcon = "dark:text-slate-300 text-slate-700 md:w-10 md:h-10 w-4 h-4";
 
 export default function Home() {
   const [heroRow, setHeroRow] = useState<Array<HeroRow>>([
     {
-      icon: <UsersRound size={40} className={heroIcon} />,
+      icon: <UsersRound className={heroIcon} />,
       percent: "2M",
       subTitle: "Active User",
     },
     {
-      icon: <Award size={40} className={heroIcon} />,
+      icon: <Award  className={heroIcon} />,
       percent: "95%",
       subTitle: "Success",
     },
     {
-      icon: <EthernetPortIcon size={40} className={heroIcon} />,
+      icon: <EthernetPortIcon  className={heroIcon} />,
       percent: "150+",
       subTitle: "Countries",
     },
     {
-      icon: <Star size={40} className={heroIcon} />,
+      icon: <Star  className={heroIcon} />,
       percent: "4.9",
       subTitle: "Rating",
     },
   ]);
   return (
     <div className="overflow-hidden z-[1] bg-gradient-to-br from-[#0037ff13] to-[#ff00ea0f] dark:from-[#0b1330d6] dark:to-[#20071edf] animate-gradient-x bg-[length:200%_200%]">
-      <div className="flex items-center flex-col md:gap-y-8 gap-y-3 w-full pt-[100px] pb-[100px] hero-section">
+      <div className="flex items-center flex-col md:gap-y-8 gap-y-3 w-full md:pt-[100px] pt-[50px] pb-[100px] hero-section">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 1.5 }}
           className="p-5 rounded-lg border-[1px] dark:border-slate-700 text-sm md:text-xl cursor-pointer hover:scale-[1.05] transition-all duration-200 border-slate-300 flex items-center gap-x-2 justify-center"
         >
-          <CircleStar />
+          <Star className="animate-rotate"/>
           World-Class Health Platform
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.9 }}
-          className="text-transparent p-2 text-[50px] md:text-[70px] font-bold text-center md:leading-[80px] bg-gradient-to-r dark:from-primary dark:to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]"
+          className="text-transparent p-2 text-[30px] md:text-[70px] font-bold text-center md:leading-[80px] bg-gradient-to-r dark:from-primary dark:to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]"
         >
           Transform Your Body & Life
         </motion.h1>
@@ -67,7 +67,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.9 }}
-          className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] text-center md:text-2xl dark:text-slate-400"
+          className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] leading-[30px] text-center md:text-2xl dark:text-slate-400"
         >
           World-Class Health Platform Transform Your Body & Life Experience the{" "}
           
@@ -101,7 +101,7 @@ export default function Home() {
           </motion.button>
         </div>
 
-        <section className="flex items-center gap-x-5 justify-center mt-3">
+        <section className="flex grid-cols-2 items-center gap-x-5 justify-center mt-5">
           {heroRow.map((val, _i) => {
             return (
               <motion.section
