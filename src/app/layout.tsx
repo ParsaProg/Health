@@ -49,7 +49,7 @@ export default function RootLayout({
       <body>
         <AnimatedBackground />
         <FontHOCComponent>
-          <div className="mt-[130px]"></div>
+          <div className="mt-[90px]"></div>
           <ClientLayout>{children}</ClientLayout>
         </FontHOCComponent>
       </body>
