@@ -28,17 +28,17 @@ export default function Home() {
       subTitle: "Active User",
     },
     {
-      icon: <Award  className={heroIcon} />,
+      icon: <Award className={heroIcon} />,
       percent: "95%",
       subTitle: "Success",
     },
     {
-      icon: <EthernetPortIcon  className={heroIcon} />,
+      icon: <EthernetPortIcon className={heroIcon} />,
       percent: "150+",
       subTitle: "Countries",
     },
     {
-      icon: <Star  className={heroIcon} />,
+      icon: <Star className={heroIcon} />,
       percent: "4.9",
       subTitle: "Rating",
     },
@@ -52,7 +52,7 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 1.5 }}
           className="p-5 rounded-lg border-[1px] dark:border-slate-700 text-sm md:text-xl cursor-pointer hover:scale-[1.05] transition-all duration-200 border-slate-300 flex items-center gap-x-2 justify-center"
         >
-          <Star className="animate-rotate"/>
+          <Star className="animate-rotate" />
           World-Class Health Platform
         </motion.div>
         <motion.h1
@@ -70,9 +70,7 @@ export default function Home() {
           className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] leading-[30px] text-center md:text-2xl dark:text-slate-400"
         >
           World-Class Health Platform Transform Your Body & Life Experience the{" "}
-          
           future of wellness with AI-powered insights, expert guidance, and{" "}
-          
           revolutionary health practices that transform lives globally.
         </motion.p>
         <div className="flex items-center gap-5 justify-center flex-wrap">
@@ -84,9 +82,9 @@ export default function Home() {
               scale: 0.95,
               transition: { type: "spring", stiffness: 400, damping: 20 },
             }}
-            className="flex items-center gap-x-2 bg-gradient-to-r dark:from-primary dark:to-blue-700 rounded-lg p-5 text-xl animate-gradient-x bg-[length:200%_200%]"
+            className="flex items-center gap-x-2 bg-gradient-to-r dark:from-primary dark:to-blue-700 rounded-lg p-5 md:text-xl animate-gradient-x bg-[length:200%_200%]"
           >
-            <Power />
+            <Power className="md:w-10 md:h-10 w-5 h-5" />
             Start Revolution
           </motion.button>
 
@@ -94,9 +92,9 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9, x: 100 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 0.7 }}
-            className="flex items-center gap-x-2 border-[1px] dark:border-slate-600 text-slate-300 rounded-lg p-5 text-xl "
+            className="flex items-center gap-x-2 border-[1px] dark:border-slate-600 text-slate-300 rounded-lg p-5 md:text-xl "
           >
-            <Target />
+            <Target className="md:w-10 md:h-10 w-5 h-5" />
             Ergonomic Tips
           </motion.button>
         </div>
