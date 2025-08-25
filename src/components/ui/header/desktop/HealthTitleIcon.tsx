@@ -1,5 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
+import Image from "next/image";
+import HealthLogo from "@/../public/icons/health-logo.png";
 
 export default function HeaderTitleIcon() {
   return (
@@ -15,7 +18,7 @@ export default function HeaderTitleIcon() {
       className="w-[200px] flex items-center justify-between"
     >
       <section className="relative flex items-center gap-x-2">
-        <Heart size={40} className="text-[#B80023] "/>
+        <Image alt="health-logo" src={HealthLogo.src} width={40} height={40} className="text-[#B80023] "/>
         <div className="absolute top-1 left-6 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
         <div className="flex flex-col items-start">
           <h1 className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#B80023] to-[#9600b8]">
