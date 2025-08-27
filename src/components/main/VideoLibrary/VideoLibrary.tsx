@@ -25,7 +25,7 @@ export default function VideoLibrary() {
         Expert-curated video content featuring world-renowned health
         professionals and cutting-edge wellness techniques.
       </p>
-      <h2></h2>
+      
     </div>
   );
 }
