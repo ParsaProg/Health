@@ -18,7 +18,7 @@ interface HeroRow {
   subTitle: string;
 }
 
-const heroIcon = "dark:text-slate-300 text-slate-700 md:w-10 md:h-10 w-7 h-7";
+const heroIcon = "dark:text-slate-300 text-white md:w-10 md:h-10 w-7 h-7";
 
 export default function Home() {
   const [heroRow, setHeroRow] = useState<Array<HeroRow>>([
@@ -59,7 +59,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.9 }}
-          className="text-transparent p-2 text-[30px] md:text-[70px] font-bold text-center md:leading-[80px] bg-gradient-to-r dark:from-primary dark:to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]"
+          className="text-transparent p-2 text-[30px] md:text-[70px] font-bold text-center md:leading-[80px] bg-gradient-to-r from-primary to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]"
         >
           Transform Your Body & Life
         </motion.h1>
@@ -67,7 +67,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.9 }}
-          className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] leading-[30px] text-center md:text-2xl dark:text-slate-400"
+          className="[@media(min-width:1000px)]:w-[1000px] mb-5 px-5 md:px-0 md:leading-[40px] leading-[30px] text-center md:text-2xl dark:text-slate-400 text-slate-700"
         >
           World-Class Health Platform Transform Your Body & Life Experience the{" "}
           future of wellness with AI-powered insights, expert guidance, and{" "}
@@ -82,7 +82,7 @@ export default function Home() {
               scale: 0.95,
               transition: { type: "spring", stiffness: 400, damping: 20 },
             }}
-            className="flex items-center gap-x-2 bg-gradient-to-r dark:from-primary dark:to-blue-700 rounded-lg p-5 md:text-xl animate-gradient-x bg-[length:200%_200%]"
+            className="flex items-center gap-x-2 bg-gradient-to-r from-primary to-blue-700 rounded-lg p-5 md:text-xl animate-gradient-x bg-[length:200%_200%] text-white"
           >
             <Power className="md:w-10 md:h-10 w-5 h-5" />
             Start Revolution
@@ -92,7 +92,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9, x: 100 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 0.7 }}
-            className="flex items-center gap-x-2 border-[1px] dark:border-slate-600 text-slate-300 rounded-lg p-5 md:text-xl "
+            className="flex items-center gap-x-2 border-[1px] dark:border-slate-600 border-slate-400 dark:text-slate-300 text-slate-700 rounded-lg p-5 md:text-xl "
           >
             <Target className="md:w-10 md:h-10 w-5 h-5" />
             Ergonomic Tips
@@ -109,11 +109,11 @@ export default function Home() {
                 className="flex flex-col items-center gap-y-1"
                 key={_i}
               >
-                <div className="rounded-lg p-3 bg-[#b300ff28] mb-1">
+                <div className="rounded-lg p-3 dark:bg-[#b300ff28] bg-[#621384db] mb-1">
                   {val.icon}
                 </div>
-                <h1 className="font-bold text-slate-300">{val.percent}</h1>
-                <h3 className="font-[500] text-slate-400">{val.subTitle}</h3>
+                <h1 className="font-bold dark:text-slate-300 text-slate-700">{val.percent}</h1>
+                <h3 className="font-[500] dark:text-slate-400 text-slate-600">{val.subTitle}</h3>
               </motion.section>
             );
           })}
