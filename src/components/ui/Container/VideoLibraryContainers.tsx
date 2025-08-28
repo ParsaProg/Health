@@ -1,3 +1,5 @@
 export default function VideoLibraryContainer(){
-    return <div className="vide-library"></div>
+    return <div className="video-library">
+        
+    </div>
 } 

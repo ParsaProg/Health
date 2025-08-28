@@ -16,12 +16,12 @@ export default function VideoLibrary() {
         Video Content
       </motion.div>
       <section className="flex flex-col items-center">
-        <h1 className="text-[50px] font-bold tracking-[3px]">Health & Body</h1>
-        <h1 className="text-transparent text-[50px] font-bold tracking-[3px] bg-gradient-to-r from-primary to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]">
+        <h1 className="text-center sm:text-[50px] text-[30px] font-bold">Health & Body</h1>
+        <h1 className="sm:mt-[-10px] text-center text-transparent sm:text-[50px] text-[30px] font-bold bg-gradient-to-r from-primary to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]">
           Video Library
         </h1>
       </section>
-      <p className="dark:text-slate-400 text-slate-700 text-xl leading-[30px] text-center [@media(min-width:1000px)]:w-[1000px] font-[500]">
+      <p className="dark:text-slate-400 text-slate-700 sm:text-xl text-md leading-[30px] text-center [@media(min-width:1000px)]:w-[1000px] font-[400]">
         Expert-curated video content featuring world-renowned health
         professionals and cutting-edge wellness techniques.
       </p>
