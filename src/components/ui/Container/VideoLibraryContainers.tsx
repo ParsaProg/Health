@@ -24,7 +24,7 @@ export default function VideoLibraryContainer({
             <Play size={40} />
           </div>
         </div>
-        <div className="w-full h-[280px] z-[10]">
+        <div className="w-full h-[280px] z-[10] relative">
           <Image
             onLoad={() => setIsload(true)}
             unoptimized
