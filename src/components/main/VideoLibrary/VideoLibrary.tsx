@@ -1,5 +1,6 @@
 "use client";
 
+import VideoLibraryContainer from "@/components/ui/Container/VideoLibraryContainers";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
@@ -16,7 +17,9 @@ export default function VideoLibrary() {
         Video Content
       </motion.div>
       <section className="flex flex-col items-center">
-        <h1 className="text-center sm:text-[50px] text-[30px] font-bold">Health & Body</h1>
+        <h1 className="text-center sm:text-[50px] text-[30px] font-bold">
+          Health & Body
+        </h1>
         <h1 className="sm:mt-[-10px] text-center text-transparent sm:text-[50px] text-[30px] font-bold bg-gradient-to-r from-primary to-blue-700 bg-clip-text animate-gradient-x bg-[length:200%_200%]">
           Video Library
         </h1>
@@ -25,7 +28,7 @@ export default function VideoLibrary() {
         Expert-curated video content featuring world-renowned health
         professionals and cutting-edge wellness techniques.
       </p>
-      
+      <VideoLibraryContainer />
     </div>
   );
 }
