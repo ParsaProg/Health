@@ -48,6 +48,12 @@ export default function Header() {
   ];
   return (
     <AnimatePresence>
+      <BackdropFilter
+        isShowDialog={isShowDialog}
+        setIsShowDialog={setIsShowDialog}
+        isShowThemeDialog={isShowThemeDialog}
+        setIsShowThemeDialog={setIsShowThemeDialog}
+      />
       <motion.div
         key="header-motion"
         initial={{ opacity: 0, y: -200 }}
@@ -93,13 +99,6 @@ export default function Header() {
           </div>
         </div>
       </motion.div>
-
-      <BackdropFilter
-        isShowDialog={isShowDialog}
-        setIsShowDialog={setIsShowDialog}
-        isShowThemeDialog={isShowThemeDialog}
-        setIsShowThemeDialog={setIsShowThemeDialog}
-      />
     </AnimatePresence>
   );
 }
