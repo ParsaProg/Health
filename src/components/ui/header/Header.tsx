@@ -3,7 +3,7 @@
 import { FilePlay, FileText, Rss, Sparkles, Target } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navItemClassName } from "@/constants/navItems";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BackdropFilter from "./mobile/BackdropBlur";
 import MobileMenu from "./mobile/Menu";
 import MobileMenuButtonHeader from "./mobile/MenuButton";
@@ -14,6 +14,14 @@ import NavItem from "./desktop/NavItem";
 export default function Header() {
   const [isShowDialog, setIsShowDialog] = useState<boolean>(false);
   const [isShowThemeDialog, setIsShowThemeDialog] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isShowDialog) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isShowDialog]);
   const navItems = [
     {
       title: "Articles",
@@ -59,7 +67,7 @@ export default function Header() {
         initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 0.7 }}
         animate={{ opacity: 1, y: 0 }}
-        className="backdrop-blur-md bg-header z-[9999] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-sm shadow-[#5555552c]"
+        className="backdrop-blur-xl z-[9999] bg-[#ffffff53] dark:bg-[#0d1117ad] fixed top-0 w-[100%] flex justify-center pt-4 pb-4 shadow-sm shadow-[#5555552c]"
       >
         <div className="flex items-center justify-between w-[95%] z-[9999]">
           <HeaderTitleIcon />
