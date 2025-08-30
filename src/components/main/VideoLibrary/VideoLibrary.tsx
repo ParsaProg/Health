@@ -1,12 +1,13 @@
 "use client";
 
 import VideoLibraryContainer from "@/components/ui/Container/VideoLibraryContainers";
+import { FakeVideos } from "@/data/fakeVideos";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 export default function VideoLibrary() {
   return (
-    <div className="w-[95%] flex flex-col items-center mt-24 gap-y-5">
+    <div className="w-[100%] flex flex-col items-center mt-24 gap-y-5 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -28,7 +29,11 @@ export default function VideoLibrary() {
         Expert-curated video content featuring world-renowned health
         professionals and cutting-edge wellness techniques.
       </p>
-      <VideoLibraryContainer />
+      <div className="flex items-center justify-center gap-10 px-3 xl:px-[100px] xl:flex-nowrap flex-wrap w-full mt-5">
+        {FakeVideos.map((video, index) => {
+          return <VideoLibraryContainer key={index} {...video} />;
+        })}
+      </div>
     </div>
   );
 }
