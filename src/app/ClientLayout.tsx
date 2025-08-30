@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/ui/header/Header";
+import Footer from "@/components/ui/footer/Footer";
 
 export default function ClientLayout({
   children,
@@ -13,6 +14,7 @@ export default function ClientLayout({
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Header />
       {children}
+      <Footer />
     </ThemeProvider>
   );
 }
