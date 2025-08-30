@@ -53,7 +53,7 @@ export default function VideoLibraryContainer({
           {category}
         </section>
         <div>
-          <h1 className="dark:text-red-500 text-red-900 font-[500] text-2xl">{title}</h1>
+          <h1 className="dark:text-red-100 text-red-900 font-[500] text-2xl">{title}</h1>
           <p className="dark:text-slate-400 text-slate-500 font-[400] text-lg mt-1">
             {description}
           </p>
