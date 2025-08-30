@@ -75,7 +75,7 @@ export default function VideoLibraryContainer({
             </div>
           </div>
 
-          <button className="p-3 rounded-lg border-none bg-primary hover:bg-purple-800 text-white font-bold flex items-center gap-x-2 justify-center transition-all duation-500">
+          <button className="p-3 rounded-lg border-none bg-primary hover:bg-purple-800 text-white font-bold flex items-center gap-x-2 justify-center transition-all duration-500">
             Watch
             <Eye size={20} />
           </button>
