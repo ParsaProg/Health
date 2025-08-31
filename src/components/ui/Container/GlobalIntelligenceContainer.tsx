@@ -1,10 +1,18 @@
 "use client";
 
+import { GlobalIntelligenceInterFace } from "@/interfaces/global-intelligence";
 import { Apple, ArrowRight, Calendar, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function GlobalIntellignece() {
+export default function GlobalIntellignece({
+  posterImage,
+  category,
+  description,
+  time,
+  title,
+  trend
+}: GlobalIntelligenceInterFace) {
   const [isLoad, setIsload] = useState<boolean>(false);
   return (
     <div className="group z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] w-[650px] h-[350px] border-[1px] dark:border-slate-800 border-slate-300 flex flex-row items-center justify-start">
@@ -14,9 +22,7 @@ export default function GlobalIntellignece() {
             onLoad={() => setIsload(true)}
             unoptimized
             alt="video_poster"
-            src={
-              "https://cdn.mos.cms.futurecdn.net/C2pjtmUhJK5zyUhhBeKfnm-1200-80.jpg"
-            }
+            src={posterImage}
             fill
             className={`${
               isLoad
@@ -57,7 +63,10 @@ export default function GlobalIntellignece() {
         </div>
         <button className="hover:bg-pink-500 hover:text-white transition-all duration-500 p-3 rounded-lg text-md text-pink-500 border-none outline-none font-[500] flex items-center justify-center gap-x-2">
           Read Full Analysis
-          <ArrowRight size={18} className=" group-hover:ml-1 transition-all duration-300"/>
+          <ArrowRight
+            size={18}
+            className=" group-hover:ml-1 transition-all duration-300"
+          />
         </button>
       </section>
     </div>
