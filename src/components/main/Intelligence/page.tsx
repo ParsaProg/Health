@@ -13,7 +13,7 @@ export default function Intelligence() {
         subTitle="Intelligence"
         desc="Stay ahead with AI-curated health discoveries, breakthrough research, and wellness trends from leading institutions worldwide."
       />
-      <div className="grid [@media(min-width:1370px)]:grid-cols-2 grid-cols-1 [@media(max-width:650px)]:p-5 gap-5 mt-5 pb-10">
+      <div className="grid [@media(min-width:1370px)]:grid-cols-2  grid-cols-1 [@media(max-width:650px)]:p-5 gap-5 mt-5 pb-10">
         {FakeGlobalIntelligenceData.map((gValue, index) => {
           return <GlobalIntellignece key={index} {...gValue} />;
         })}

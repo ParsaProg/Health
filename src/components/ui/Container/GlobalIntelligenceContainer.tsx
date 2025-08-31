@@ -16,8 +16,8 @@ export default function GlobalIntellignece({
   const [isLoad, setIsload] = useState<boolean>(false);
   return (
     <div className="overflow-hidden group z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] [@media(max-width:650px)]:flex-col [@media(min-width:650px)]:w-[650px] w-[100%] [@media(min-width:650px)]:h-[350px] h-auto border-[1px] dark:border-slate-800 border-slate-300 flex flex-row items-center justify-start">
-      <div className=" [@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[80vw] relative w-[400px] h-full overflow-hidden rounded-l-lg">
-        <div className="[@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[80vw] w-[400px] h-full relative">
+      <div className=" [@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[70vw] relative w-[400px] h-full overflow-hidden rounded-l-lg">
+        <div className="[@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[70vw] w-[400px] h-full relative">
           <Image
             onLoad={() => setIsload(true)}
             unoptimized
