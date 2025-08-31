@@ -1,17 +1,25 @@
+"use client";
+
 import type { LandingSectionsStarterInterFace } from "@/interfaces/LandingSectionsStarterInterFace";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
-export default function LandingSectionsStarter({title, subTitle, desc}: LandingSectionsStarterInterFace) {
+export default function LandingSectionsStarter({
+  icon,
+  iconTitle,
+  title,
+  subTitle,
+  desc,
+}: LandingSectionsStarterInterFace) {
   return (
-    <div>
+    <div className="flex flex-col items-center gap-y-3">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3, duration: 1.5 }}
         className="p-4 rounded-lg border-[1px] dark:border-slate-700 text-sm md:text-lg cursor-pointer hover:scale-[1.05] transition-all duration-200 border-slate-300 flex items-center gap-x-2 justify-center"
       >
-        <Play size={20} className="animate-rotate" />
-        Video Content
+        {icon}
+        {iconTitle}
       </motion.div>
       <section className="flex flex-col items-center">
         <h1 className="text-center sm:text-[50px] text-[30px] font-bold">
