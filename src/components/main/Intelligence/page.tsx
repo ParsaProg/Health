@@ -1,5 +1,6 @@
 import GlobalIntellignece from "@/components/ui/Container/GlobalIntelligenceContainer";
 import LandingSectionsStarter from "@/components/ui/landing/section-starter";
+import { FakeGlobalIntelligenceData } from "@/data/fakeGlobalsIntelligence";
 import { Globe } from "lucide-react";
 
 export default function Intelligence() {
@@ -12,11 +13,10 @@ export default function Intelligence() {
         subTitle="Intelligence"
         desc="Stay ahead with AI-curated health discoveries, breakthrough research, and wellness trends from leading institutions worldwide."
       />
-      <div className="grid grid-cols-2 gap-5 mt-5">
-        <GlobalIntellignece />
-        <GlobalIntellignece />
-        <GlobalIntellignece />
-        <GlobalIntellignece />
+      <div className="grid [@media(min-width:1370px)]:grid-cols-2 grid-cols-1 [@media(max-width:650px)]:p-5 gap-5 mt-5 pb-10">
+        {FakeGlobalIntelligenceData.map((gValue, index) => {
+          return <GlobalIntellignece key={index} {...gValue} />;
+        })}
       </div>
     </div>
   );
