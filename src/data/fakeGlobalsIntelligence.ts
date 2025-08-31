@@ -18,6 +18,7 @@ export const FakeGlobalIntelligenceData: GlobalIntelligenceInterFace[] = [
     time: "6 hourse ago",
     description:
       "New meta-analysis reveals enhanced Mediterranean diet variations that reduce cardiovascular disease risk by 67% and boost longevity markers.",
+    trend: true,
   },
   {
     posterImage:
@@ -27,6 +28,7 @@ export const FakeGlobalIntelligenceData: GlobalIntelligenceInterFace[] = [
     time: "1 days ago",
     description:
       "Neuroscientists discover how mental wellness directly rewrites genetic expression, offering new pathways to physical health optimization.",
+    trend: true,
   },
   {
     posterImage:
