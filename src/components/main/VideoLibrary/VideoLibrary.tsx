@@ -2,7 +2,7 @@
 
 import VideoLibraryContainer from "@/components/ui/Container/VideoLibraryContainers";
 import LandingSectionsStarter from "@/components/ui/landing/section-starter";
-import { FakeVideos } from "@/data/fakeVideos";
+import { FakeVideos } from "@/models/fakeVideos";
 import { Play } from "lucide-react";
 
 export default function VideoLibrary() {
