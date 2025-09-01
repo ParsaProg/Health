@@ -50,7 +50,8 @@ export default function GlobalIntellignece({
             </h5>
           </div>
           <div className="font-[400] text-slate-700 dark:text-slate-400 flex items-center gap-x-1">
-            <Calendar size={18} />6 hours ago
+            <Calendar size={18} />
+            {time}
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
