@@ -1,7 +1,15 @@
 "use client";
 
 import { GlobalIntelligenceInterFace } from "@/interfaces/global-intelligence";
-import { Apple, ArrowRight, Calendar, TrendingUp } from "lucide-react";
+import {
+  Apple,
+  ArrowRight,
+  Brain,
+  Calendar,
+  Moon,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -43,7 +51,15 @@ export default function GlobalIntellignece({
       <section className="flex flex-col gap-y-5 items-start w-full px-5 [@media(max-width:650px)]:py-5">
         <div className="flex flex-row items-center justify-between w-full">
           <div className="flex items-center gap-x-2 text-black dark:text-white">
-            <Apple size={20} className="dark:text-pink text-pink-600" />
+            {category === "Research" ? (
+              <Moon size={20} className="dark:text-pink text-pink-600" />
+            ) : category === "Nutrition" ? (
+              <Apple size={20} className="dark:text-pink text-pink-600" />
+            ) : category === "Mental Health" ? (
+              <Brain size={20} className="dark:text-pink text-pink-600" />
+            ) : (
+              <Target size={20} className="dark:text-pink text-pink-600" />
+            )}
 
             <h5 className="px-2 py-1 rounded-lg border-[1px] border-slate-400 dark:border-slate-400 text-slate-700 dark:text-slate-300 text-sm">
               {category}
