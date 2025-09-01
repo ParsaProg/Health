@@ -1,6 +1,6 @@
 import GlobalIntellignece from "@/components/ui/Container/GlobalIntelligenceContainer";
 import LandingSectionsStarter from "@/components/ui/landing/section-starter";
-import { FakeGlobalIntelligenceData } from "@/data/fakeGlobalsIntelligence";
+import { FakeGlobalIntelligenceData } from "@/models/fakeGlobalsIntelligence";
 import { Globe } from "lucide-react";
 
 export default function Intelligence() {
