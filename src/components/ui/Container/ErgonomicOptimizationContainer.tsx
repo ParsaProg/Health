@@ -17,7 +17,17 @@ export default function ErgonomicOptimizationContainer({
 }: ErgonomicTipsInterFace) {
   const [isLoad, setIsload] = useState<boolean>(false);
   return (
-    <div className="cursor-pointer group w-[450px] h-[630px] pb-5 overflow-hidden flex flex-col shadow-md rounded-lg dark:shadow-[#ffffff19] shadow-[#00000025] transition-all duration-500 hover:scale-[1.03] gap-y-5 border-slate-300 dark:border-slate-700 hover:border-pink-600 dark:hover:border-pink-500 border-[1px] dark:bg-slate-900 bg-white cursor-poiner">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        hidden: { opacity: 0.3, scale: 0.9 },
+        visible: { opacity: 1, scale: 1 },
+      }}
+      className="cursor-pointer group w-[450px] h-[630px] pb-5 overflow-hidden flex flex-col shadow-md rounded-lg dark:shadow-[#ffffff19] shadow-[#00000025] transition-all duration-500 hover:scale-[1.03] gap-y-5 border-slate-300 dark:border-slate-700 hover:border-pink-600 dark:hover:border-pink-500 border-[1px] dark:bg-slate-900 bg-white cursor-poiner"
+    >
       <div className="relative w-full h-[500px] overflow-hidden rounded-t-lg">
         <div className="w-full h-[350px] relative">
           <Image
@@ -83,6 +93,6 @@ export default function ErgonomicOptimizationContainer({
           Start Protocol
         </motion.button>
       </section>
-    </div>
+    </motion.div>
   );
 }
