@@ -7,9 +7,9 @@
 </div>
 
 ### small window (mobile)
-<div style="flex-direction:row;display:flex;justify-content:center;align-items:center;gap:10px">
-    <img width="200px" alt="android-dark-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/android-dark-shot.png?raw=true"/>
-    <img width="200px" alt="android-light-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/android-light-shot.png?raw=true"/>
+<div style="flex-direction:row;display:flex;justify-content:center;align-items:center;row-gap:10px">
+    <img width="250px" alt="android-dark-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/android-dark-shot.png?raw=true"/>
+    <img width="250px" alt="android-light-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/android-light-shot.png?raw=true"/>
 </div>
 
 # Health — Next-Gen Wellness Platform
