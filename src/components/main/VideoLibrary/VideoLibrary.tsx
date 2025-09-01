@@ -17,7 +17,7 @@ export default function VideoLibrary() {
         professionals and cutting-edge wellness techniques.Expert-curated video content featuring world-renowned health
         professionals and cutting-edge wellness techniques."
       />
-      <div className="scale-[0.85] sm:scale-[1] flex items-center justify-center gap-10 px-3 xl:px-[100px] xl:flex-nowrap flex-wrap w-full">
+      <div className="flex items-center justify-center gap-10 px-3 xl:px-[100px] xl:flex-nowrap flex-wrap w-full">
         {FakeVideos.map((video, index) => {
           return <VideoLibraryContainer key={index} {...video} />;
         })}
