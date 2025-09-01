@@ -11,7 +11,17 @@ export default function LandingSectionsStarter({
   desc,
 }: LandingSectionsStarterInterFace) {
   return (
-    <div className="flex flex-col items-center gap-y-3">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.8 }}
+      variants={{
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 },
+      }}
+      className="flex flex-col items-center gap-y-3"
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -32,6 +42,6 @@ export default function LandingSectionsStarter({
       <p className="dark:text-slate-400 text-slate-700 sm:text-xl text-md leading-[30px] text-center [@media(min-width:1000px)]:w-[1000px] font-[400]">
         {desc}
       </p>
-    </div>
+    </motion.div>
   );
 }
