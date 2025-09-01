@@ -1,5 +1,6 @@
 import ErgonomicOptimizationContainer from "@/components/ui/Container/ErgonomicOptimizationContainer";
 import LandingSectionsStarter from "@/components/ui/landing/section-starter";
+import { FakeErgonomicData } from "@/models/fakeErgonomicSectionData";
 import { Target } from "lucide-react";
 
 export default function ErgonomicOptimization() {
@@ -13,9 +14,9 @@ export default function ErgonomicOptimization() {
         desc="Transform your daily habits with precision-engineered ergonomic practices backed by biomechanical research and proven results."
       />
       <div className="flex flex-wrap w-full p-3 justify-center items-center gap-8">
-        <ErgonomicOptimizationContainer />
-        <ErgonomicOptimizationContainer />
-        <ErgonomicOptimizationContainer />
+        {FakeErgonomicData.map((targetValues, index) => {
+          return <ErgonomicOptimizationContainer key={index} {...targetValues}/>
+        })}
       </div>
     </div>
   );
