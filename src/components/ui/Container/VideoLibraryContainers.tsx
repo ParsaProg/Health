@@ -3,7 +3,8 @@
 import type { VideoLibrary } from "@/interfaces/videoLibrary";
 import { Apple, Eye, Play, Star, Sun, Target } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import {motion} from "framer-motion";
 
 export default function VideoLibraryContainer({
   category,
@@ -17,7 +18,15 @@ export default function VideoLibraryContainer({
   const [isLoad, setIsload] = useState<boolean>(false);
 
   return (
-    <div className="z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] w-[520px] h-[500px] border-[1px] dark:border-slate-800 border-slate-300 flex flex-col items-start justify-center gap-y-3">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        hidden: { opacity: 0.3, scale: 0.9 },
+        visible: { opacity: 1, scale: 1 },
+      }} className="z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] w-[520px] h-[500px] border-[1px] dark:border-slate-800 border-slate-300 flex flex-col items-start justify-center gap-y-3">
       <div className="relative w-full h-[280px] overflow-hidden rounded-t-lg">
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  flex justify-center items-center text-black">
           <div className="opacity-0 group-hover:opacity-[1] transition-all duration-500 text-white rounded-full p-5 bg-primary">
@@ -89,6 +98,6 @@ export default function VideoLibraryContainer({
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
