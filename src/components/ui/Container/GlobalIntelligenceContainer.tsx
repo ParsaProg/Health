@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import {motion} from "framer-motion";
 
 export default function GlobalIntellignece({
   posterImage,
@@ -23,7 +24,15 @@ export default function GlobalIntellignece({
 }: GlobalIntelligenceInterFace) {
   const [isLoad, setIsload] = useState<boolean>(false);
   return (
-    <div className="overflow-hidden group z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] [@media(max-width:650px)]:flex-col [@media(min-width:650px)]:w-[650px] w-[100%] [@media(min-width:650px)]:h-[350px] h-auto border-[1px] dark:border-slate-800 border-slate-300 flex flex-row items-center justify-start">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        hidden: { opacity: 0.3, scale: 0.9 },
+        visible: { opacity: 1, scale: 1 },
+      }} className="overflow-hidden group z-10 group hover:scale-[1.03] transition-all duration-500 cursor-pointer dark:bg-slate-900 bg-white rounded-lg shadow-md dark:shadow-[#ffffff15] shadow-[#0000001a] [@media(max-width:650px)]:flex-col [@media(min-width:650px)]:w-[650px] w-[100%] [@media(min-width:650px)]:h-[350px] h-auto border-[1px] dark:border-slate-800 border-slate-300 flex flex-row items-center justify-start">
       <div className=" [@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[70vw] relative w-[400px] h-full overflow-hidden rounded-l-lg">
         <div className="[@media(max-width:650px)]:w-full [@media(max-width:650px)]:h-[70vw] w-[400px] h-full relative">
           <Image
@@ -86,6 +95,6 @@ export default function GlobalIntellignece({
           />
         </button>
       </section>
-    </div>
+    </motion.div>
   );
 }
