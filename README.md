@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project (Health) Shots📸
+### Big window
+
+<div style="flex-direction:column;display:flex;justify-content:center;align-items:center;gap:10px">
+    <img alt="dark-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/dark-shot.png?raw=true"/>
+    <img alt="light-shot" src="https://github.com/ParsaProg/Health/blob/main/public/images/light-shot.png?raw=true"/>
+</div>
+
+### small window (mobile)
+
+# Health — Next-Gen Wellness Platform
+
+**Transform Your Body & Life** with a world-class health platform powered by AI insights, expert guidance, and revolutionary wellness practices—crafted to elevate your well-being.
+
+---
+
+## Key Features
+
+### 1. Articles & Expert Resources
+
+- Daily content across **Articles**, **Health News**, and **Ergonomic Tips**—delivered by leading health researchers and institutions.
+- Includes topics like breakthrough sleep protocols, emerging nutrition science, mental health trends, and AI-augmented workspace ergonomics. :contentReference[oaicite:0]{index=0}
+
+### 2. Curated Video Library
+
+- Engaging video content tailored for **Beginner**, **Intermediate**, and **Advanced** users, all produced by top health professionals. :contentReference[oaicite:1]{index=1}
+- Sample routines include:
+  - **Morning Energy Activation** (_15 min_)
+  - **Nutrition Science Decoded** (_22 min_)
+  - **Posture Transformation System** (_18 min_) :contentReference[oaicite:2]{index=2}
+
+### 3. AI-Powered Global Insights
+
+- Handpicked, AI-curated discoveries in wellness, research, and health trends from globally renowned institutions. :contentReference[oaicite:3]{index=3}
+- Highlights include:
+  - _Sleep Optimization Protocol by Stanford (~2 hours ago)_
+  - _Mediterranean Diet 3.0 (~6 hours ago)_
+  - _Mind-Body Connection breakthroughs (~1 day ago)_
+  - _AI-Powered Workspace Ergonomics (~2 days ago)_ :contentReference[oaicite:4]{index=4}
+
+### 4. Science-Backed Ergonomic Protocols
+
+A suite of actionable protocols based on biomechanical research:
+
+- **Quantum Desk Optimization** _(Advanced, ~30 min setup)_
+
+  - Neural monitor positioning, biometric chair adjustment, circadian lighting sync :contentReference[oaicite:5]{index=5}
+
+- **Sleep Architecture Mastery** _(Intermediate, ~5 min daily)_
+
+  - Cervical curve support, lumbar decompression, REM optimization angle :contentReference[oaicite:6]{index=6}
+
+- **Dynamic Movement Protocol** _(Beginner, ~2 min hourly)_
+  - Hourly activation alerts, metabolic reset exercises, postural realignment :contentReference[oaicite:7]{index=7}
+
+---
+
+## Platform Highlights
+
+- **Global Reach**: Over 2 million active users across 150+ countries.
+- **High Success Rate**: 95% satisfaction.
+- **Top Ratings**: Average rating of 4.9/5. :contentReference[oaicite:8]{index=8}
+
+---
+
+## Tech Stack (Example)
+
+_(Tailor these to your actual technologies)_
+
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Backend**: Node.js, Express or Django (or your stack)
+- **AI Services**: OpenAI GPT-X, TensorFlow, custom ML APIs
+- **Database**: PostgreSQL, MongoDB, or others
+- **Hosting**: Vercel (as seen on site)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/your-org/health-platform.git
+   cd health-platform
+   ```

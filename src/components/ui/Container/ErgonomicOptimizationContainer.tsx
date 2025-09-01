@@ -17,7 +17,7 @@ export default function ErgonomicOptimizationContainer({
 }: ErgonomicTipsInterFace) {
   const [isLoad, setIsload] = useState<boolean>(false);
   return (
-    <div className="cursor-pointer group w-[450px] h-[630px] pb-5 overflow-hidden flex flex-col shadow-md rounded-lg dark:shadow-[#ffffff19] shadow-[#00000025] transition-all duration-500 hover:scale-[1.03] gap-y-5 border-slate-300 dark:border-slate-700 hover:border-pink-600 dark:hover:border-pink-500 border-[1px] cursor-poiner">
+    <div className="cursor-pointer group w-[450px] h-[630px] pb-5 overflow-hidden flex flex-col shadow-md rounded-lg dark:shadow-[#ffffff19] shadow-[#00000025] transition-all duration-500 hover:scale-[1.03] gap-y-5 border-slate-300 dark:border-slate-700 hover:border-pink-600 dark:hover:border-pink-500 border-[1px] dark:bg-slate-900 bg-white cursor-poiner">
       <div className="relative w-full h-[500px] overflow-hidden rounded-t-lg">
         <div className="w-full h-[350px] relative">
           <Image
@@ -44,7 +44,7 @@ export default function ErgonomicOptimizationContainer({
       </div>
       <section className="mx-5 flex flex-col gap-y-5 justify-between h-full">
         <section className="flex flex-col gap-y-8">
-          <div className="transition-all duration-200 flex flex-row items-center gap-x-2 font-[600] text-[23px] group-hover:text-pink-600 text-pink-900 dark:text-white">
+          <div className="transition-all duration-200 flex flex-row items-center gap-x-5 font-[600] text-[23px] group-hover:text-pink-600 text-pink-900 dark:text-white">
             <div className="group-hover:scale-[1.05] transition-all duration-200 p-3 rounded-xl bg-pink-200 dark:bg-slate-200 dark:text-black text-pink-800">
               {category === "eye" ? (
                 <Eye size={25} />
